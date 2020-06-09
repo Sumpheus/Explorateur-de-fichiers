@@ -1,0 +1,28 @@
+body{
+  background-image: ('https://images6.alphacoders.com/106/1068341.png');
+  color:blue;
+}
+
+#conteneur1 h1{
+  text-align: center;
+  font-family: impact;
+  color: blue;
+}
+
+conteneurphp4{
+  
+}
+
+.buttontest {
+  background-color: aqua;
+  color: gold;
+  border-style: outset;
+  transition-duration: 0.5s;
+}
+
+.buttontest:active {
+  transition-duration: 0.5s;
+  border-style: inset;
+  background-color: blue;
+  color: orange;
+}
