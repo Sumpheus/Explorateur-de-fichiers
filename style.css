@@ -9,12 +9,12 @@ body{
   color: blue;
 }
 
-conteneurphp4{
-  
+#conteneurphp4{
+
 }
 
 .buttontest {
-  background-color: aqua;
+  background-color:aqua;
   color: gold;
   border-style: outset;
   transition-duration: 0.5s;
@@ -23,6 +23,6 @@ conteneurphp4{
 .buttontest:active {
   transition-duration: 0.5s;
   border-style: inset;
-  background-color: blue;
   color: orange;
+  background-color: blue;
 }
