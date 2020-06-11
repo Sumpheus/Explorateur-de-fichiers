@@ -14,6 +14,13 @@
   <div class='col-4'>
 
   <?php
+
+  if(isset($_POST['selected'])){
+    $newdir=$_POST['selected'];
+    chdir($newdir);
+  }
+
+
 //Total valeurs dossier
   $doss = "";
   function folderSize($doss){
@@ -34,7 +41,7 @@
 return $count_size;
 }
 
-echo getcwd() . DIRECTORY_SEPARATOR . $_SERVER['SCRIPT_NAME'];
+echo getcwd() . DIRECTORY_SEPARATOR ;
 $dir = getcwd();
 $dir_content = scandir($dir);
 
@@ -54,22 +61,42 @@ foreach ($dir_content as $items) {
 }
 }
 
+
 ?>
 
 <div class='' id='contenue'>
 
-<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-  <input type='text' name='New_dir' value="creer">
-  <input type='text' name='New_dir' placeholder='Supprimer'>
-  <input type='submit' id='envoyer' name='envoyer' value='Créer un dossier'>
+<form action="test.php" method="post">
+  <input type='text' name='nom' placeholder="Fichier">
+  <button type='submit' name='create'> Créer un fichier</button>
+
+  <input type='text' name='ndir' placeholder='Dossier'>
+  <button type='submit' name='ndirbutton'>Créer Dossier</button>
+
+  <input type='text' name='target' placeholder='Supprimer fichier'>
+  <button type='submit' name='target2'>Supprimer fichier</button>
+
+  <input type='submit' name='targetdoss' placeholder="Supprimer dossier">
+  <button type='submit' name='targetdoss2'>Supprimer dossier</button>
 </form>
 
-<form class='buttontest' action='Créer.php' method='POST'>
-    <button type='submit' name='submit'>Créer un dossier</button>
+
+<!-- <form action='creer_fichier.php' method='POST'>
+    <button class="buttontest" type="submit" name="submit">Créer un fichier</button>
 </form>
-<form class='buttontest' action='Effacer.php' method='POST'>
-    <button type='submit' name='submit'>Supprimer un fichier</button>
+
+<form action='creer.php' method='POST'>
+    <button class='buttontest' type='submit' name='submit'>Créer un dossier</button>
 </form>
+
+<form action='effacer.php' method='POST'>
+    <button class='buttontest' type='submit' name='submit'>Supprimer un fichier</button>
+</form>
+
+<form action='effacer_dossier.php' method='POST'>
+    <button class='buttontest' type='submit' name='submit'>Supprimer un dossier</button>
+</form> -->
+
     </div>
   </div>
 </div>
