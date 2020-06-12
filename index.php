@@ -66,7 +66,7 @@ foreach ($dir_content as $items) {
 
 <div class='' id='contenue'>
 
-<form action="test.php" method="post">
+<form action="gear.php" method="post">
   <input type='text' name='nom' placeholder="Fichier">
   <button type='submit' name='create'> Créer un fichier</button>
 
